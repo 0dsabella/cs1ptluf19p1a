@@ -1,18 +1,26 @@
 import random
 
 def charList(n):
+
     count = 9
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-    letters = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm' ,'n' ,'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
+    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm' ,'n' ,'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
     list = []
 
+    #Append the vowels first
     for i in range(n):
         count = count - 1
-        list.append(random.choice(vowels))
+        tempVowel = (random.choice(vowels))
+        list.append(tempVowel)
+        vowels.remove(tempVowel)
 
+    #Use remaining # of counts to append a # of consonants
     for i in range(count):
-        list.append(random.choice(letters))
+        tempVowel = (random.choice(consonants))
+        list.append(tempVowel)
+        consonants.remove(tempVowel)
 
     return list
 
-print(charList(2))
+#Max # of vowels is 6
+print(charList(4))
