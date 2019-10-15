@@ -12,13 +12,11 @@ def charList(n):
         count = count - 1
         tempVowel = (random.choice(vowels))
         list.append(tempVowel)
-        vowels.remove(tempVowel)
-
+        
     #Use remaining # of counts to append a # of consonants
     for i in range(count):
         tempVowel = (random.choice(consonants))
         list.append(tempVowel)
-        consonants.remove(tempVowel)
 
     return list
 
