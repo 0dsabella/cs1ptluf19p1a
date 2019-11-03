@@ -17,8 +17,15 @@ def charList(n):
     for i in range(count):
         tempVowel = (random.choice(consonants))
         list.append(tempVowel)
+        
+    #So far I have got the list to become randomized and stored into a new list.
+    #I am trying to find a way to get the entire code to repeat to keep adding new combinations to newList.      
+    for i in range(n):
+      newList = []
+      random.shuffle(list)
+      newList.append(list)
 
-    return list
+    return newList
 
 #Max # of vowels is 6
 print(charList(4))
